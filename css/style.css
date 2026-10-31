@@ -553,6 +553,48 @@ main {
   display: none;
 }
 
+.effect-level__slider {
+  position: absolute;
+  top: 14px;
+  right: 15%;
+  left: 15%;
+}
+
+.effect-level__slider.noUi-target {
+  height: 4px;
+  border: 0;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+.effect-level__slider .noUi-connect {
+  background: #ffe753;
+}
+
+.effect-level__slider .noUi-handle {
+  width: 14px;
+  height: 14px;
+  top: -6px;
+  right: -7px;
+  border-radius: 50%;
+}
+
+.pristine-error {
+  display: block;
+  margin: 4px auto;
+  color: #ff4e4e;
+  text-align: center;
+  text-transform: none;
+}
+
+.load-error {
+  grid-column: 1 / -1;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
 
 /**
  * Блок с эффектами, которые можно применить к изображению
@@ -1195,7 +1237,7 @@ main {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 3;
 
   background-color: rgba(0, 0, 0, 0.8);
 }
