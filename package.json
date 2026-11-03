@@ -16,9 +16,12 @@
     "eslint-config-htmlacademy": "5.1.2"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "nouislider": "^15.8.1",
+    "pristinejs": "^1.1.0"
+  },
   "scripts": {
-    "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
+    "start": "browser-sync start --server --no-ui --files \"js/**/*.js\" --listen 127.0.0.1",
     "lint": "eslint js/"
   },
   "engines": {
