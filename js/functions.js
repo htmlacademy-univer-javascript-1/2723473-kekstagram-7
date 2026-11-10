@@ -21,3 +21,17 @@ window.extractDigits = (value) => {
 
   return digits === '' ? NaN : parseInt(digits, 10);
 };
+
+window.isMeetingInWorkday = (workdayStart, workdayEnd, meetingStart, meetingDuration) => {
+  const timeToMinutes = (time) => {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;
+  };
+
+  const workdayStartMinutes = timeToMinutes(workdayStart);
+  const workdayEndMinutes = timeToMinutes(workdayEnd);
+  const meetingStartMinutes = timeToMinutes(meetingStart);
+  const meetingEndMinutes = meetingStartMinutes + meetingDuration;
+
+  return meetingStartMinutes >= workdayStartMinutes && meetingEndMinutes <= workdayEndMinutes;
+};
